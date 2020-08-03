@@ -1,8 +1,7 @@
 echo "Starting autoupdate..."
-pip install virtualenv
+pip install wheel virtualenv
 virtualenv .au
 source .au/bin/activate
-pip install wheel
 pip install https://github.com/simonbray/planemo/archive/autoupdate-sb.zip  # install from my fork for now
 planemo --help
 
