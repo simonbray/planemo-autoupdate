@@ -1,6 +1,7 @@
 echo "Starting autoupdate..."
 virtualenv .au
 source .au/bin/activate
+pip install wheel
 pip install https://github.com/simonbray/planemo/archive/autoupdate-sb.zip  # install from my fork for now
 
 # start updating bgruening repo
