@@ -3,6 +3,7 @@ pip install wheel
 sudo apt install python-virtualenv
 virtualenv .au
 source .au/bin/activate
+pip install conda
 pip install https://github.com/simonbray/planemo/archive/autoupdate-sb.zip  # install from my fork for now
 planemo --help
 
