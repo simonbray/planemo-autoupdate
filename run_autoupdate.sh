@@ -7,11 +7,15 @@ pip install conda
 pip install https://github.com/simonbray/planemo/archive/autoupdate-sb.zip  # install from my fork for now
 planemo --help
 
-# start updating bgruening repo
-git clone git@github.com:bgruening/galaxytools.git
-cd galaxytools
-planemo autoupdate -r
-git diff
+# git credentials
+git config --global user.email "sbray1371@gmail.com"
+git config --global user.name "Simon Bray"
+
+## start updating bgruening repo
+#git clone git@github.com:bgruening/galaxytools.git
+#cd galaxytools
+#planemo autoupdate -r
+#git diff
 
 # test make commit
 git clone git@github.com:simonbray/gxwf.git
