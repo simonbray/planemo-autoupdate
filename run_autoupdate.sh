@@ -13,3 +13,7 @@ cd galaxytools
 planemo autoupdate -r
 git diff
 
+# test make commit
+git clone git@github.com:simonbray/gxwf.git
+git commit --allow-empty -m 'test commit with github actions'
+git push
