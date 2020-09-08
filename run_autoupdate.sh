@@ -8,7 +8,7 @@ pip install https://github.com/simonbray/planemo/archive/autoupdate-sb.zip  # in
 planemo --help
 
 # start updating bgruening repo
-git clone https://github.com/bgruening/galaxytools.git
+git clone git@github.com:bgruening/galaxytools.git
 cd galaxytools
 planemo autoupdate -r
 git diff
