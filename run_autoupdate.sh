@@ -12,3 +12,4 @@ git clone git@github.com:bgruening/galaxytools.git
 cd galaxytools
 planemo autoupdate -r
 git diff
+
