@@ -5,22 +5,17 @@ virtualenv .au
 source .au/bin/activate
 # pip install conda
 # pip install https://github.com/simonbray/planemo/archive/autoupdate-sb.zip  # install from my fork for now
-git clone --single-branch --branch autoupdate-sb https://github.com/simonbray/planemo.git
 pip install -e planemo/
 planemo --help
 
 # git credentials
-git config --global user.email "sbray1371@gmail.com"
-git config --global user.name "Simon Bray"
+git config --global user.email "lorrainealisha75@gmail.com"
+git config --global user.name "lorrainealisha75"
 
-## start updating bgruening repo
-#git clone git@github.com:bgruening/galaxytools.git
-#cd galaxytools
-#planemo autoupdate -r
-#git diff
-
-# test make commit
-git clone git@github.com:simonbray/gxwf.git
-cd gxwf
-git commit --allow-empty -m 'test commit with github actions'
-git push
+planemo clone https://github.com/lorrainealisha75/planemo.git
+cd planemo/
+git branch
+git checkout -b planemo-test
+git commit --allow-empty -m 'new test commit from planemo'
+git push -u origin planemo-test
+planemo pull_request -m "planemo test pr"
