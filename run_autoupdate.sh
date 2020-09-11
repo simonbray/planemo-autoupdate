@@ -1,6 +1,6 @@
 echo "Starting autoupdate..."
 pip3 install wheel
-pip3 install virtualenv
+sudo pip3 install virtualenv
 virtualenv .au
 source .au/bin/activate
 # pip install conda
