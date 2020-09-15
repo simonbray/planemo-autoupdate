@@ -9,6 +9,7 @@ on:
   - cron: "0 4 * * *"
   push:
     branches: [ master ]
+  - pull_request
 
 # A workflow run is made up of one or more jobs that can run sequentially or in parallel
 jobs:
@@ -24,6 +25,7 @@ jobs:
     - uses: webfactory/ssh-agent@v0.4.0
       with:
         ssh-private-key: ${{ secrets.SSH_PRIVATE_KEY }}
+        repo-token: ${{ secrets.GITHUB_TOKEN }}
     # Decrypt github credentials into .planemo/yml
     - name: Decrypt secret
       run: bash decrypt_credentials.sh
