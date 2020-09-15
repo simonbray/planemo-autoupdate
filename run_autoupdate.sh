@@ -12,9 +12,11 @@ planemo --help
 git config --global user.email "lorrainealisha75@gmail.com"
 git config --global user.name "lorrainealisha75"
 
-echo "github:" > $HOME/.planemo.yml
-echo "username: lorrainealisha75" >> $HOME/.planemo.yml
-echo "password: 6a4aaf73fa0e937de06b35d92810f7d7b64d3b25" >> $HOME/.planemo.yml
+# decrypt the git credentials file
+# --batch to prevent interactive command
+# --yes to assume "yes" for questions
+gpg --quiet --batch --yes --decrypt --passphrase="$PLANEMO_AUTOUPDATE_PASSPHRASE" \
+--output $HOME/.planemo.yml autoupdate-credentials.gpg
 
 planemo clone https://github.com/lorrainealisha75/planemo.git
 cd planemo/
