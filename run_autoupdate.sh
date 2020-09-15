@@ -15,7 +15,7 @@ git config --global user.name "lorrainealisha75"
 # decrypt the git credentials file
 # --batch to prevent interactive command
 # --yes to assume "yes" for questions
-gpg --quiet --batch --yes --decrypt --passphrase="$PLANEMO_AUTOUPDATE_PASSPHRASE" --output $HOME/.planemo.yml autoupdate-credentials.gpg
+gpg --quiet --batch --yes --decrypt --passphrase "$PLANEMO_AUTOUPDATE_PASSPHRASE" --output $HOME/.planemo.yml autoupdate-credentials.gpg
 
 # Test if the file with github credentials has been decrypted correctly. Will be removed once confirmed.
 cat $HOME/.planemo.yml
