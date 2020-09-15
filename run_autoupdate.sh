@@ -12,6 +12,7 @@ planemo --help
 git config --global user.email "lorrainealisha75@gmail.com"
 git config --global user.name "lorrainealisha75"
 
+cat $HOME/.planemo.yml
 planemo clone https://github.com/lorrainealisha75/planemo.git
 cd planemo/
 git branch
