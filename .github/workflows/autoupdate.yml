@@ -25,8 +25,8 @@ jobs:
       with:
         ssh-private-key: ${{ secrets.SSH_PRIVATE_KEY }}
     # Decrypt github credentials into .planemo/yml
-    - name: Decrypt large secret
-      run: ./.github/workflows/decrypt_credentials.sh
+    - name: Decrypt secret
+      run: bash decrypt_credentials.sh
       env:
         PLANEMO_AUTOUPDATE_PASSPHRASE: ${{ secrets.PLANEMO_AUTOUPDATE_PASSPHRASE }}
     # Runs a single command using the runners shell
