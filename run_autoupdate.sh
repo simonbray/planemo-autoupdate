@@ -12,9 +12,6 @@ planemo --help
 git config --global user.email "lorrainealisha75@gmail.com"
 git config --global user.name "lorrainealisha75"
 
-# Test if the file with github credentials has been decrypted correctly. Will be removed once confirmed.
-cat $HOME/.planemo.yml
-
 planemo clone https://github.com/lorrainealisha75/planemo.git
 cd planemo/
 git branch
