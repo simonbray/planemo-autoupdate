@@ -24,8 +24,11 @@ jobs:
     - uses: webfactory/ssh-agent@v0.4.0
       with:
         ssh-private-key: ${{ secrets.SSH_PRIVATE_KEY }}
+    # Decrypt github credentials into .planemo/yml
+    - name: Decrypt large secret
+      run: ./.github/workflows/decrypt_credentials.sh
+      env:
+        PLANEMO_AUTOUPDATE_PASSPHRASE: ${{ secrets.PLANEMO_AUTOUPDATE_PASSPHRASE }}
     # Runs a single command using the runners shell
     - name: Run a one-line script
       run: bash run_autoupdate.sh
-    - name: Test printing secret (Remove this step in production)
-      run: cat $HOME/.planemo.yml
