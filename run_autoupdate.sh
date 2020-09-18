@@ -12,9 +12,9 @@ planemo --help
 git config --global user.email "lorrainealisha75@gmail.com"
 git config --global user.name "lorrainealisha75"
 
-planemo clone https://github.com/lorrainealisha75/planemo.git
+planemo clone https://github.com/lorrainealisha75/planemo_test.git
 $HOME/.planemo/hub
-cd planemo/
+cd planemo_test/
 git branch
 git checkout -b planemo-pr
 git commit --allow-empty -m 'new test commit from planemo'
