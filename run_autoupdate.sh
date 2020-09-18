@@ -9,7 +9,7 @@ pip install -e planemo/
 planemo --help
 
 # git credentials
-git config --global hub.protocol https
+git config --global hub.protocol ssh
 git config --global user.email "lorrainealisha75@gmail.com"
 git config --global user.name "Lorraine Coelho"
 export GITHUB_TOKEN="$GITHUB_TOKEN"
