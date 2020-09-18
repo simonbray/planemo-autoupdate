@@ -15,12 +15,13 @@ git config --global user.name "lorrainealisha75"
 export GITHUB_TOKEN="$GITHUB_TOKEN"
 
 rm -rf galaxytools
-planemo clone --skip_fork https://github.com/lorrainealisha75/galaxytools
+planemo clone --branch planemo-pr-`date +%F-%H-%m` https://github.com/lorrainealisha75/galaxytools
 echo "Cloning successful"
 cd galaxytools/
+echo "Folder:"
 pwd
-git branch
-git checkout -b planemo-pr
+echo "Commit"
 git commit --allow-empty -m 'new test commit from planemo'
-git push -u origin planemo-pr
+echo "Push"
+git push -u origin planemo-pr-`date +%F-%H-%m`
 planemo pull_request -m "planemo test pr"
