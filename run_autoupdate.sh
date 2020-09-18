@@ -14,10 +14,10 @@ git config --global user.email "lorrainealisha75@gmail.com"
 git config --global user.name "lorrainealisha75"
 export GITHUB_TOKEN="$GITHUB_TOKEN"
 
-rm -rf planemo
-planemo clone https://github.com/lorrainealisha75/planemo.git
+rm -rf galaxytools
+planemo clone https://github.com/lorrainealisha75/galaxytools
 /usr/local/bin/hub
-cd planemo/
+cd galaxytools/
 git branch
 git checkout -b planemo-pr
 git commit --allow-empty -m 'new test commit from planemo'
