@@ -15,7 +15,7 @@ git config --global user.name "lorrainealisha75"
 export GITHUB_TOKEN="$GITHUB_TOKEN"
 
 rm -rf galaxytools
-planemo clone https://github.com/lorrainealisha75/galaxytools
+planemo clone --skip_fork https://github.com/lorrainealisha75/galaxytools
 echo "Cloning successful"
 cd galaxytools/
 pwd
