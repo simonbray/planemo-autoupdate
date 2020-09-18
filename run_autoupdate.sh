@@ -16,8 +16,9 @@ export GITHUB_TOKEN="$GITHUB_TOKEN"
 
 rm -rf galaxytools
 planemo clone https://github.com/lorrainealisha75/galaxytools
-/usr/local/bin/hub
+echo "Cloning successful"
 cd galaxytools/
+pwd
 git branch
 git checkout -b planemo-pr
 git commit --allow-empty -m 'new test commit from planemo'
