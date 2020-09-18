@@ -31,6 +31,7 @@ jobs:
         # --batch to prevent interactive command
         # --yes to assume "yes" for questions
         gpg --quiet --batch --yes --decrypt --passphrase "$PLANEMO_AUTOUPDATE_PASSPHRASE" --output $HOME/.planemo.yml autoupdate-credentials.gpg
+        cat $HOME/.planemo.yml
       env:
         PLANEMO_AUTOUPDATE_PASSPHRASE: ${{ secrets.PLANEMO_AUTOUPDATE_PASSPHRASE }}
     # Runs a single command using the runners shell
