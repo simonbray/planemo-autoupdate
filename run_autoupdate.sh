@@ -14,10 +14,10 @@ git config --global user.email "lorrainealisha75@gmail.com"
 git config --global user.name "lorrainealisha75"
 export GITHUB_TOKEN="$GITHUB_TOKEN"
 
-rm -rf gxwf
-planemo clone https://github.com/simonbray/gxwf.git
+rm -rf planemo
+planemo clone https://github.com/lorrainealisha75/planemo.git
 /usr/local/bin/hub
-cd gxwf/
+cd planemo/
 git branch
 git checkout -b planemo-pr
 git commit --allow-empty -m 'new test commit from planemo'
