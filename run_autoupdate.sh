@@ -11,7 +11,7 @@ planemo --help
 # git credentials
 git config --global hub.protocol https
 git config --global user.email "lorrainealisha75@gmail.com"
-git config --global user.name "lorrainealisha75"
+git config --global user.name "Lorraine Coelho"
 export GITHUB_TOKEN="$GITHUB_TOKEN"
 
 rm -rf galaxytools
