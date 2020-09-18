@@ -8,10 +8,6 @@ pip install https://github.com/simonbray/planemo/archive/autoupdate-sb.zip  # in
 pip install -e planemo/
 planemo --help
 
-# git credentials
-git config --global user.email "lorrainealisha75@gmail.com"
-git config --global user.name "lorrainealisha75"
-
 $HOME/.planemo/hub
 
 planemo clone https://github.com/lorrainealisha75/planemo.git
