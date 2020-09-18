@@ -9,9 +9,12 @@ pip install -e planemo/
 planemo --help
 
 # git credentials
+git config --global hub.protocol https
 git config --global user.email "lorrainealisha75@gmail.com"
 git config --global user.name "lorrainealisha75"
+export GITHUB_TOKEN="$GITHUB_TOKEN"
 
+rm -rf planemo_test
 planemo clone https://github.com/lorrainealisha75/planemo_test.git
 $HOME/.planemo/hub
 cd planemo_test/
