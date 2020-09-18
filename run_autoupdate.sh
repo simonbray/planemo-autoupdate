@@ -20,6 +20,5 @@ echo "Folder:"
 pwd
 echo "Commit"
 git commit --allow-empty -m 'new test commit from planemo'
-echo "Push"
-git push -u origin planemo-pr-`date +%F-%H-%m`
-planemo pull_request -m "planemo test pr"
+echo "Pull Request"
+planemo pull_request -m "planemo test pr 11"
