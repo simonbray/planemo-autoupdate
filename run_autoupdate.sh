@@ -16,6 +16,9 @@ git config --global user.name "Lorraine Coelho"
 rm -rf galaxytools
 planemo clone --skip_fork --branch planemo-pr-`date +%F-%H-%m` git@github.com:lorrainealisha75/galaxytools
 echo "Cloning successful"
+echo "Update hub"
+brew update && brew upgrade hub
+echo "hub update successful"
 cd galaxytools/
 echo "Folder is:"
 pwd
