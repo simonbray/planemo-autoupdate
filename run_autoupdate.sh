@@ -19,10 +19,10 @@ echo "Cloning successful"
 cd galaxytools/
 echo "Folder is:"
 pwd
-echo "Git pull origin master"
-git pull origin master
 echo "Commit"
 git commit --allow-empty -m 'new test commit from planemo'
+echo "Git pull origin master"
+git pull origin master
 echo "Push"
 git push -u origin planemo-pr-`date +%F-%H-%m`
 echo "Create pull request"
