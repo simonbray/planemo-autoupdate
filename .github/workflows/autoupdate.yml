@@ -37,4 +37,4 @@ jobs:
     - name: Run a one-line script
       run: bash run_autoupdate.sh
       env:
-        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        GITHUB_TOKEN: ${{ secrets.PLANEMO_TOKEN }}
