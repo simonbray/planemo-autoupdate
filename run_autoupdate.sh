@@ -19,7 +19,7 @@ git config --global user.email "sbray1371@gmail.com"
 git config --global user.name "Simon Bray"
 
 rm -rf galaxytools
-planemo clone --skip_fork --branch planemo-pr-93-`date +%F-%H-%m` git@github.com:lorrainealisha75/galaxytools
+planemo clone --branch planemo-pr-93-`date +%F-%H-%m` git@github.com:lorrainealisha75/galaxytools
 echo "Cloning successful"
 cd galaxytools/
 echo "Folder is:"
