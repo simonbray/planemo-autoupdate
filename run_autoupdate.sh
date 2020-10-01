@@ -23,4 +23,5 @@ echo "Commit"
 git commit --allow-empty -m 'new test commit from planemo'
 echo "Push"
 git push -u origin planemo-pr-`date +%F-%H-%m`
+echo "Create pull request"
 planemo pull_request -m "planemo test pr 11"
