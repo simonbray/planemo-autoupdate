@@ -15,8 +15,8 @@ pip install -e planemo/
 planemo --help
 
 # git credentials
-git config --global user.email "lorrainealisha75@gmail.com"
-git config --global user.name "Lorraine Coelho"
+git config --global user.email "sbray1371@gmail.com"
+git config --global user.name "Simon Bray"
 
 rm -rf galaxytools
 planemo clone --skip_fork --branch planemo-pr-93-`date +%F-%H-%m` git@github.com:lorrainealisha75/galaxytools
