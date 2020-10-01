@@ -1,26 +1,34 @@
 echo "Starting autoupdate..."
 pip3 install wheel
-sudo apt install python3-virtualenv
+sudo pip3 install virtualenv
 virtualenv .au
 source .au/bin/activate
+
+#Install latest hub
+echo "Install hub"
+brew install hub
+echo "hub install successful"
+
 # pip install conda
-# pip install https://github.com/simonbray/planemo/archive/autoupdate-sb.zip  # install from my fork for now
-git clone --single-branch --branch autoupdate-sb https://github.com/simonbray/planemo.git
+pip install https://github.com/simonbray/planemo/archive/autoupdate-sb.zip  # install from my fork for now
 pip install -e planemo/
 planemo --help
 
 # git credentials
-git config --global user.email "sbray1371@gmail.com"
-git config --global user.name "Simon Bray"
+git config --global user.email "lorrainealisha75@gmail.com"
+git config --global user.name "Lorraine Coelho"
 
-## start updating bgruening repo
-#git clone git@github.com:bgruening/galaxytools.git
-#cd galaxytools
-#planemo autoupdate -r
-#git diff
-
-# test make commit
-git clone git@github.com:simonbray/gxwf.git
-cd gxwf
-git commit --allow-empty -m 'test commit with github actions'
-git push
+rm -rf galaxytools
+planemo clone --skip_fork --branch planemo-pr-93-`date +%F-%H-%m` git@github.com:lorrainealisha75/galaxytools
+echo "Cloning successful"
+cd galaxytools/
+echo "Folder is:"
+pwd
+echo "Commit"
+git commit --allow-empty -m 'new test commit from planemo'
+echo "Git pull origin master"
+git pull origin master
+echo "Push"
+git push -u origin planemo-pr-93-`date +%F-%H-%m`
+echo "Create pull request"
+planemo pull_request -m "planemo test pr 11"
